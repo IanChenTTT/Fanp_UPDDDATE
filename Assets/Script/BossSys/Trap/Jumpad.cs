@@ -11,10 +11,10 @@ public class Jumpad : MonoBehaviour
     Collision2D collidWith;
     private void Update(){
         // Reduce amount of Input event;
-        IsPress = InputManage.Instance.OnPressSpcae();
+        //IsPress = InputManage.Instance.OnPressSpcae();
     }
     private void FixedUpdate(){
-        if(IsTouch && IsPress)
+        if(IsTouch)
         {
             Debug.Log("Suppose to jump");
             GameObject OBJ = collidWith.gameObject;
