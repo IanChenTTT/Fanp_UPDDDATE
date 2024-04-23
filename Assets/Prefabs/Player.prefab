@@ -343,7 +343,7 @@ MonoBehaviour:
         m_Bits: 13312
       headBumpLayerMask:
         serializedVersion: 2
-        m_Bits: 9217
+        m_Bits: 1
       wallLayerMask:
         serializedVersion: 2
         m_Bits: 8192
@@ -1480,6 +1480,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cf1888660d0334bbc46c89085e6e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hook_joint2d: {fileID: 0}
 --- !u!61 &2896745271731389713
 BoxCollider2D:
   m_ObjectHideFlags: 0

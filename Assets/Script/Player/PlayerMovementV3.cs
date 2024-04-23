@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -33,9 +34,16 @@ public class PlayerMovementV3 : MonoBehaviour
     [Range(0, 1)]
     float fCutJumpHeight = 0.5f;
    private float fHorizontalVelocity;
+
+   // Assumption frition material woudn't larger then 1;
+   [SerializeField]
+   [Range(0,1)]
+    private float uFrictionMultiply;
    [SerializeField] private float FlipForce;
 
+
    // CHECK FUNC MEMBER VARIABLE
+   [SerializeField] private bool isPlayerFlipForce = true;
    [SerializeField] private float castDist = 0;
    [SerializeField] private Vector2 castVecSize;
    [SerializeField] private float castRadSize;
@@ -51,6 +59,13 @@ public class PlayerMovementV3 : MonoBehaviour
         fGroundedRemember -= Time.deltaTime;
         if (IsGround())
         {
+            //If statement handle frcition f = u * force;
+            if(isFaceRight)
+                playerRB.AddForce(Vector2.left * uFrictionMultiply / 5, ForceMode2D.Impulse);
+            else
+                playerRB.AddForce(Vector2.right * uFrictionMultiply / 5, ForceMode2D.Impulse);
+            
+            //This line adjust multitap timer
             fGroundedRemember = fGroundedRememberTime;
         }
 
@@ -87,7 +102,8 @@ public class PlayerMovementV3 : MonoBehaviour
 
     }
    void FixedUpdate(){
-        playerRB.velocity = new Vector2(fHorizontalVelocity, playerRB.velocity.y);
+      playerRB.velocity = new Vector2(fHorizontalVelocity, playerRB.velocity.y);
+
       //Handle PLayer Flipping
       if (Input.GetAxisRaw("Horizontal") < 0 && isFaceRight)Flip();
       else if (Input.GetAxisRaw("Horizontal") > 0 && !isFaceRight)Flip();
@@ -96,8 +112,12 @@ public class PlayerMovementV3 : MonoBehaviour
 // Check Function
    private void Flip()
    {
-      FlipForce *= -1;
-      playerRB.AddForce(Vector2.right * FlipForce,ForceMode2D.Impulse); 
+      //this line handle quick air turn aroun
+      if(isPlayerFlipForce)
+      {
+        FlipForce *= -1;
+        playerRB.AddForce(Vector2.right * FlipForce,ForceMode2D.Impulse); 
+      }
       isFaceRight = !isFaceRight;
       transform.Rotate(0,180,0);
    }
