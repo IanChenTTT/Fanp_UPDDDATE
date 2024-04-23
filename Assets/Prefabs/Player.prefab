@@ -1319,7 +1319,7 @@ Transform:
   m_GameObject: {fileID: 6425782843728119374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.6, y: 15.863609, z: -29.282707}
+  m_LocalPosition: {x: -21.6, y: 15.863609, z: -20.168121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1480,7 +1480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95cf1888660d0334bbc46c89085e6e83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swing_oction: 0
 --- !u!61 &2896745271731389713
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1671,7 +1670,7 @@ Transform:
   m_GameObject: {fileID: 8562615318416438039}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.6, y: 15.863609, z: -29.282707}
+  m_LocalPosition: {x: -21.6, y: 15.863609, z: -20.168121}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

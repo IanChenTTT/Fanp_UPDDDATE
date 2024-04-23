@@ -14,6 +14,6 @@ public class test_place : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         print(item.transform.position.x);
     }
 }

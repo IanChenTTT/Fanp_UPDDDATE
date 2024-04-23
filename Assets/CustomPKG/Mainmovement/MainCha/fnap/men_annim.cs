@@ -5,8 +5,8 @@ using UnityEngine;
 public class men_annim : MonoBehaviour
 {
         private Animator ani ;
-        public bool swing_oction;
-    // Start is called before the first frame update
+        public GameObject hook_joint2d;
+        // public bool swing_oction;
     void Start()
     {
             ani = GetComponent<Animator>();
@@ -16,44 +16,55 @@ public class men_annim : MonoBehaviour
     void Update()
     {
         ani.SetBool("IsRunning",false);
-        ani.SetBool("IsDying",false);
         Keypress_Anim();
     }
 
     public void Keypress_Anim()
     {
-        if (Input.GetKey (KeyCode.A)){
-            ani.SetBool("IsRunning",true);
-        }
-        
-        if (Input.GetKey (KeyCode.D))
+        if (Input.GetButton ("Horizontal")||Input.GetButton ("Vertical"))
         {
             ani.SetBool("IsRunning",true);
         }
-        
+        else
+        {
+            ani.SetBool("IsRunning",false);
+        }
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
             ani.SetBool("IsJumping",true);
         }
-    // if (Input.GetKeyDown(KeyCode.X)) 
-    //     {
-    //         ani.SetBool("IsDying",true);
-    //     }
-    if(swing_oction==true)
-    {
-        if(Input.GetMouseButton(0))
+
+        if(hook_joint2d.GetComponent<SpringJoint2D>().enabled == true)
         {
             ani.SetBool("IsSwing",true);
-            if(ani.GetBool ("IsSwing") == true)
+            ani.Play("swing");
+            if(ani.GetBool("IsSwing")==true)
             {
                 ani.SetBool("IsJumping",false);
             }
         }
         else
         {
-             ani.SetBool("IsSwing",false);
+            ani.SetBool("IsSwing",false);
         }
-    }
+        /*if(swing_oction==true)
+        {
+            if(Input.GetMouseButton(0))
+            {
+                ani.SetBool("IsSwing",true);
+                ani.Play("swing");
+                if(ani.GetBool("IsSwing")==true)
+                {
+                    ani.SetBool("IsJumping",false);
+                    ani.SetBool("IsRunning",false);
+                }
+            }
+            else
+            {
+                ani.SetBool("IsSwing",false);
+            }
+        }*/
+
 
     }
 
@@ -63,6 +74,7 @@ public class men_annim : MonoBehaviour
         if(other.CompareTag("Ground"))
         {
             ani.SetBool("IsJumping",false);
+            ani.Play("idl");
         }   
                     
         /*if(other.CompareTag("swing"))

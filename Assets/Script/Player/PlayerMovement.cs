@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
    [SerializeField] private float maxFallspeed = 0f;
    private Vector2 cacheFall;
    private float cacheLow;
-   private float GravityScale;
+   [SerializeField]private float GravityScale;
    
    // CHECK FUNC MEMBER VARIABLE
    [SerializeField] private float castDist = 0;
@@ -66,14 +66,12 @@ public class PlayerMovement : MonoBehaviour
       //Credit from https://www.youtube.com/watch?v=7KiK0Aqtmzc
       if(playerRB.velocity.y > 0){
          playerRB.velocity += cacheFall * Time.deltaTime;
-         GravityScale = 1;
          playerRB.gravityScale = GravityScale;
       }
       if(playerRB.velocity.y < 0){
          //playerRB.AddForce(Vector2.down * Fallspeed, ForceMode2D.Force);
-         GravityScale = playerRB.gravityScale;   
          playerRB.gravityScale = Fallspeed * GravityScale;
-         // playerRB.velocity = new Vector2(playerRB.velocity.x, Mathf.Max(playerRB.velocity.y, -maxFallspeed));
+         playerRB.velocity = new Vector2(playerRB.velocity.x, Mathf.Max(playerRB.velocity.y, -maxFallspeed));
       }           
       //Handle PLayer Flipping
       if (playerRB.velocity.x < 0 && isFaceRight)Flip();

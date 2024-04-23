@@ -47,6 +47,8 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     [HideInInspector] public Vector2 grapplePoint;
     [HideInInspector] public Vector2 grappleDistanceVector;
+    private bool isHitMoving = false;
+    private GameObject isHitTarget;
 
     private void Start()
     {
@@ -57,9 +59,20 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
     private void Update()
     {
+         if(isHitMoving){
+                Debug.Log("isHitHere");
+                Debug.Log(isHitTarget);
+                Debug.Log("Launch pooint"+launchToPoint);
+                grapplePoint = isHitTarget.transform.position;
+                grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
+                RotateGun(grapplePoint, true);
+                Grapple();
+        }
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             SetGrapplePoint();
+           
+
         }
         else if (Input.GetKey(KeyCode.Mouse0))
         {
@@ -75,7 +88,7 @@ public class Tutorial_GrapplingGun : MonoBehaviour
 
             if (launchToPoint && grappleRope.isGrappling)
             {
-                if (launchType == LaunchType.Transform_Launch)
+                if (isHitMoving||(launchType == LaunchType.Transform_Launch))
                 {
                     Vector2 firePointDistnace = firePoint.position - gunHolder.localPosition;
                     Vector2 targetPos = grapplePoint - firePointDistnace;
@@ -87,6 +100,10 @@ public class Tutorial_GrapplingGun : MonoBehaviour
         {
             grappleRope.enabled = false;
             m_springJoint2D.enabled = false;
+            if(isHitMoving){
+                isHitMoving = false;  
+
+            }
 
             if(launchType == LaunchType.Transform_Launch)
                 m_rigidbody.gravityScale = 1;
@@ -121,12 +138,25 @@ public class Tutorial_GrapplingGun : MonoBehaviour
             RaycastHit2D _hit = Physics2D.Raycast(firePoint.position, distanceVector.normalized);
             if (_hit.transform.gameObject.layer == grappableLayerNumber || grappleToAll)
             {
-                if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
-                {
-                    grapplePoint = _hit.point;
+                if(_hit.transform.gameObject.name.Contains("bridge")){
+                    Debug.Log(_hit.transform.position);
+                    Debug.Log(_hit.transform.gameObject);
+                    grapplePoint = _hit.transform.position;
                     grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
                     grappleRope.enabled = true;
+                    isHitMoving = true;
+                    isHitTarget = _hit.transform.gameObject;
+
                 }
+                else{
+                    if (Vector2.Distance(_hit.point, firePoint.position) <= maxDistnace || !hasMaxDistance)
+                        {
+                        grapplePoint = _hit.point;
+                        grappleDistanceVector = grapplePoint - (Vector2)gunPivot.position;
+                        grappleRope.enabled = true;
+                        }
+                }
+                
             }
         }
     }

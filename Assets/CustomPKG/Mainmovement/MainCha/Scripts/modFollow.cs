@@ -5,7 +5,7 @@ using UnityEngine;
 public class modFollow : MonoBehaviour
 {
     public Transform target;
-    public float a=0.3f;
+    public float a=0.3f,player_y=0;
     void Update()
     {
         if (target != null)
@@ -20,7 +20,7 @@ public class modFollow : MonoBehaviour
             //     a=0.019f;
             // }
             // Vector3 newPosition = new Vector2(target.position.x-a, target.position.y +(float)0.04);
-            Vector3 newPosition = new Vector2(target.position.x, target.position.y);
+            Vector3 newPosition = new Vector2(target.position.x, target.position.y+player_y);
             transform.position = newPosition;
         }
     }
