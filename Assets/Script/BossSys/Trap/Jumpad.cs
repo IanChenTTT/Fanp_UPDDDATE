@@ -7,7 +7,6 @@ public class Jumpad : MonoBehaviour
 {
     public float forceMagnitude; // Adjust this value to control the force strength
     private bool IsTouch = false;
-    private bool IsPress = false;
     Collision2D collidWith;
     private void Update(){
         // Reduce amount of Input event;
