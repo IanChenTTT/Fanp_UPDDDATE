@@ -41,6 +41,9 @@ public class PlayerMovementV3 : MonoBehaviour
     private float uFrictionMultiply;
    [SerializeField] private float FlipForce;
 
+    // New PlayerAnimation
+
+
 
    // CHECK FUNC MEMBER VARIABLE
    [SerializeField] private bool isPlayerFlipForce = true;

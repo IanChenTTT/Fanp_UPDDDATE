@@ -301,7 +301,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3506382391514649039, guid: 4b37d267a11e4434e9f9575397332d24, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.9874
+      value: -0.306
       objectReference: {fileID: 0}
     - target: {fileID: 3506382391514649039, guid: 4b37d267a11e4434e9f9575397332d24, type: 3}
       propertyPath: m_LocalPosition.y
@@ -947,7 +947,7 @@ MonoBehaviour:
   m_Intensity: 0.3
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 1d70e237
+  m_ApplyToSortingLayers: a1d24d84
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1225,7 +1225,7 @@ MonoBehaviour:
   m_Intensity: 1.01
   m_LightVolumeIntensity: 1.08
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 1d70e237
+  m_ApplyToSortingLayers: a1d24d84
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2457,7 +2457,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &793468665
@@ -2526,7 +2526,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &793468667
@@ -2681,7 +2681,7 @@ MonoBehaviour:
   m_Intensity: 1.01
   m_LightVolumeIntensity: 1.08
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 1d70e237
+  m_ApplyToSortingLayers: a1d24d84
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3127,7 +3127,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &912054102
@@ -3275,7 +3275,7 @@ MonoBehaviour:
   m_Intensity: 1.46
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 1d70e237
+  m_ApplyToSortingLayers: a1d24d84
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3397,7 +3397,7 @@ MonoBehaviour:
   m_Intensity: 0.39
   m_LightVolumeIntensity: 0.47
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 1d70e23777c105d761ef4620a367380e690168511b370ccc
+  m_ApplyToSortingLayers: a1d24d84c9f04553a55fbaa30000000089201c3b359ae9a2a1c75764
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -4299,7 +4299,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 727690169719203479, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_SortingLayerID
-      value: 541519713
+      value: -1548066907
       objectReference: {fileID: 0}
     - target: {fileID: 2469195570566197199, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_Name
@@ -4311,7 +4311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 541519713
+      value: -1548066907
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[1]
@@ -4558,7 +4558,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1415635025 stripped
@@ -4939,7 +4939,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!224 &1556062788 stripped
@@ -5632,11 +5632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 541519713
+      value: -1548066907
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[1]
@@ -6131,7 +6131,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1806375251
@@ -6520,7 +6520,7 @@ MonoBehaviour:
   m_Intensity: 0.25
   m_LightVolumeIntensity: 0.47
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: c9f0455361ef462077c105d71d70e237a367380e690168511b370ccc
+  m_ApplyToSortingLayers: c9f04553a1d24d84
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -6626,8 +6626,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1548066907
-  m_SortingLayer: -1
+  m_SortingLayerID: -2075274591
+  m_SortingLayer: -3
   m_SortingOrder: -2
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7198,7 +7198,7 @@ MonoBehaviour:
   m_Intensity: 0.1
   m_LightVolumeIntensity: 0
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 61ef462000000000a367380e690168511b370ccc77c105d7
+  m_ApplyToSortingLayers: c9f04553a55fbaa30000000089201c3b359ae9a2a1c75764
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -7312,7 +7312,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2033160275
@@ -7367,7 +7367,7 @@ MonoBehaviour:
   m_Intensity: 1.01
   m_LightVolumeIntensity: 1.08
   m_LightVolumeIntensityEnabled: 1
-  m_ApplyToSortingLayers: 1d70e237
+  m_ApplyToSortingLayers: a1d24d84
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -7957,7 +7957,7 @@ PrefabInstance:
       objectReference: {fileID: 1119390877}
     - target: {fileID: 5364817009462500155, guid: 743337ea8c852e24b99fa6fc66ed273a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.777304
+      value: 1.3132002
       objectReference: {fileID: 0}
     - target: {fileID: 5364817009462500155, guid: 743337ea8c852e24b99fa6fc66ed273a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8019,11 +8019,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.77331
+      value: 1.309948
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.42817998
+      value: -0.43886995
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8418,6 +8418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2105539279}
     m_Modifications:
+    - target: {fileID: 691031477561633742, guid: 3f18553e54bccf9458df1e444a405f71, type: 3}
+      propertyPath: m_IsGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1201721856226182462, guid: 3f18553e54bccf9458df1e444a405f71, type: 3}
       propertyPath: m_Name
       value: Global Volume

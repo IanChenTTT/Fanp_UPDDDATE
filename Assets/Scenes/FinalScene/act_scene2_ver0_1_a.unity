@@ -434,7 +434,7 @@ MonoBehaviour:
   m_Intensity: 53.55
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 1d70e23777c105d761ef462000000000a367380e
+  m_ApplyToSortingLayers: 0000000089201c3bc9f04553a1d24d84a55fbaa3
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -1940,7 +1940,7 @@ MonoBehaviour:
   m_Intensity: 53.55
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 1d70e23777c105d761ef462000000000a367380e
+  m_ApplyToSortingLayers: 00000000a1d24d84c9f04553a55fbaa389201c3b
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -2706,15 +2706,13 @@ ParticleSystemRenderer:
   m_RenderAlignment: 0
   m_Pivot: {x: 0, y: 0, z: 0}
   m_Flip: {x: 0, y: 0, z: 0}
+  m_UseCustomVertexStreams: 0
   m_EnableGPUInstancing: 1
   m_ApplyActiveColorSpace: 1
   m_AllowRoll: 1
   m_FreeformStretching: 0
   m_RotateWithStretchDirection: 1
-  m_UseCustomVertexStreams: 0
   m_VertexStreams: 00010304
-  m_UseCustomTrailVertexStreams: 0
-  m_TrailVertexStreams: 00010304
   m_Mesh: {fileID: 0}
   m_Mesh1: {fileID: 0}
   m_Mesh2: {fileID: 0}
@@ -8546,7 +8544,7 @@ MonoBehaviour:
   m_Intensity: 4.5
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 1d70e23777c105d761ef462000000000a367380e690168511b370ccc
+  m_ApplyToSortingLayers: a1d24d84c9f04553a55fbaa30000000089201c3b359ae9a2a1c75764
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -9510,7 +9508,7 @@ MonoBehaviour:
   m_Intensity: 28.6
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 1d70e23777c105d761ef462000000000a367380e690168511b370ccc
+  m_ApplyToSortingLayers: a1d24d84c9f04553a55fbaa30000000089201c3b359ae9a2a1c75764
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -10009,8 +10007,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 857569552}
   - {fileID: 1081080091}
+  - {fileID: 857569552}
   - {fileID: 99499435}
   - {fileID: 459221027}
   - {fileID: 870913781}
@@ -10753,11 +10751,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 75.612465
+      value: 79.43765
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.78473
+      value: 2.78485
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11477,11 +11475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 937586717
+      value: -2075274591
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[1]
-      value: 937586717
+      value: -2075274591
       objectReference: {fileID: 0}
     - target: {fileID: 5103288809454036896, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_SortingLayer
@@ -11489,7 +11487,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103288809454036896, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_SortingLayerID
-      value: -687488649
+      value: 1397092553
       objectReference: {fileID: 0}
     - target: {fileID: 5846859794368168122, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_LocalScale.x
@@ -12327,7 +12325,7 @@ PrefabInstance:
       objectReference: {fileID: 760301115}
     - target: {fileID: 5364817009462500155, guid: 743337ea8c852e24b99fa6fc66ed273a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.8499
+      value: 71.691444
       objectReference: {fileID: 0}
     - target: {fileID: 5364817009462500155, guid: 743337ea8c852e24b99fa6fc66ed273a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12870,7 +12868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4208072182744776976, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 937586717
+      value: -2075274591
       objectReference: {fileID: 0}
     - target: {fileID: 5103288809454036896, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_SortingLayer
@@ -12878,7 +12876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103288809454036896, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_SortingLayerID
-      value: -687488649
+      value: 1397092553
       objectReference: {fileID: 0}
     - target: {fileID: 5846859794368168122, guid: acefd3ed0d7f0424a814e07de65b7b9f, type: 3}
       propertyPath: m_LocalScale.x
