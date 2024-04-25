@@ -7,7 +7,8 @@ public class PlayerMovementV3 : MonoBehaviour
 {
     [SerializeField]
     float fJumpVelocity = 5;
-
+    private float HorizontalInput;
+    private float VerticalInput;
     Rigidbody2D playerRB;
 
     float fJumpPressedRemember = 0;
@@ -43,7 +44,9 @@ public class PlayerMovementV3 : MonoBehaviour
 
     // New PlayerAnimation
 
+    [SerializeField] private NewPlayerAnim playerAnim;
 
+    [SerializeField] private SpringJoint2D hook_joint2d;
 
    // CHECK FUNC MEMBER VARIABLE
    [SerializeField] private bool isPlayerFlipForce = true;
@@ -55,10 +58,21 @@ public class PlayerMovementV3 : MonoBehaviour
     void Start ()
     {
         playerRB = GetComponent<Rigidbody2D>();
+        playerAnim = GetComponent<NewPlayerAnim>();
 	}
 	
 	void Update ()
     {
+        HorizontalInput = Input.GetAxisRaw("Horizontal");
+        VerticalInput = Input.GetAxisRaw("Vertical");
+        //Hook Animation
+        if(hook_joint2d != null)
+        {
+            if(hook_joint2d.enabled == true)
+            {
+                playerAnim.ChangeAnimeState(PlayerAnimeState.SWING);
+            }
+        }
         fGroundedRemember -= Time.deltaTime;
         if (IsGround())
         {
@@ -70,7 +84,18 @@ public class PlayerMovementV3 : MonoBehaviour
             
             //This line adjust multitap timer
             fGroundedRemember = fGroundedRememberTime;
+
+            //Ground Animation
+            if(playerRB.velocity.x != 0){
+                playerAnim.ChangeAnimeState(PlayerAnimeState.RUN);
+            }
+            if(VerticalInput == 0 && HorizontalInput == 0){
+                playerAnim.ChangeAnimeState(PlayerAnimeState.IDLE);
+            }
         }
+        // JUMP ANIMATE DETECT
+        if((VerticalInput != 0 || playerRB.velocity.y > 0 || playerRB.velocity.y < 0) && !IsGround())
+                playerAnim.ChangeAnimeState(PlayerAnimeState.JUMP);
 
         fJumpPressedRemember -= Time.deltaTime;
         if (Input.GetButtonDown("Jump"))
@@ -94,11 +119,11 @@ public class PlayerMovementV3 : MonoBehaviour
         }
 
         fHorizontalVelocity = playerRB.velocity.x;
-        fHorizontalVelocity += Input.GetAxisRaw("Horizontal");
+        fHorizontalVelocity += HorizontalInput;
 
-        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.01f)
+        if (Mathf.Abs(HorizontalInput) < 0.01f)
             fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenStopping, Time.deltaTime * 10f);
-        else if (Mathf.Sign(Input.GetAxisRaw("Horizontal")) != Mathf.Sign(fHorizontalVelocity))
+        else if (Mathf.Sign(HorizontalInput) != Mathf.Sign(fHorizontalVelocity))
             fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenTurning, Time.deltaTime * 10f);
         else
             fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingBasic, Time.deltaTime * 10f);
@@ -108,8 +133,8 @@ public class PlayerMovementV3 : MonoBehaviour
       playerRB.velocity = new Vector2(fHorizontalVelocity, playerRB.velocity.y);
 
       //Handle PLayer Flipping
-      if (Input.GetAxisRaw("Horizontal") < 0 && isFaceRight)Flip();
-      else if (Input.GetAxisRaw("Horizontal") > 0 && !isFaceRight)Flip();
+      if (HorizontalInput < 0 && isFaceRight)Flip();
+      else if (HorizontalInput > 0 && !isFaceRight)Flip();
 
    }
 // Check Function
