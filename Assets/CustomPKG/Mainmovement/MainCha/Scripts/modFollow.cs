@@ -5,7 +5,7 @@ using UnityEngine;
 public class modFollow : MonoBehaviour
 {
     public Transform target;
-    public float a=0.3f,player_y=0;
+    public float player_y=0;
     void Update()
     {
         if (target != null)

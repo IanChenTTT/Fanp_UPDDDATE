@@ -42,6 +42,8 @@ public class PlayerMovementV3 : MonoBehaviour
     private float uFrictionMultiply;
    [SerializeField] private float FlipForce;
 
+    // Player Grapple Controll
+    [SerializeField] private GameObject GrappleGun;
     // New PlayerAnimation
 
     [SerializeField] private NewPlayerAnim playerAnim;
@@ -92,10 +94,20 @@ public class PlayerMovementV3 : MonoBehaviour
             if(VerticalInput == 0 && HorizontalInput == 0){
                 playerAnim.ChangeAnimeState(PlayerAnimeState.IDLE);
             }
+
+            if(GrappleGun != null){
+                GrappleGun.SetActive(false);
+            }
         }
         // JUMP ANIMATE DETECT
         if((VerticalInput != 0 || playerRB.velocity.y > 0 || playerRB.velocity.y < 0) && !IsGround())
-                playerAnim.ChangeAnimeState(PlayerAnimeState.JUMP);
+        {
+            playerAnim.ChangeAnimeState(PlayerAnimeState.JUMP);
+
+            if(GrappleGun != null){
+                GrappleGun.SetActive(true);
+            }
+        }
 
         fJumpPressedRemember -= Time.deltaTime;
         if (Input.GetButtonDown("Jump"))
