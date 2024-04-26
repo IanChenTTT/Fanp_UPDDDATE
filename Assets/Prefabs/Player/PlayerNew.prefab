@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3506382391514649039}
   - component: {fileID: 593884320174635268}
   - component: {fileID: 8980077602269423477}
-  - component: {fileID: 6150280198015060535}
+  - component: {fileID: 5988643864052680550}
   - component: {fileID: 2808166352046213518}
   - component: {fileID: 4597974650679714665}
   - component: {fileID: 1043200442281799230}
@@ -99,7 +99,7 @@ Animator:
   m_GameObject: {fileID: 8016266055193933991}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1571e3a2898552f40a3cd1564bb9f2f6, type: 2}
+  m_Controller: {fileID: 9100000, guid: d4b199e8016e844598301c506a022fec, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -110,19 +110,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6150280198015060535
+--- !u!114 &5988643864052680550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8016266055193933991}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95cf1888660d0334bbc46c89085e6e83, type: 3}
+  m_Script: {fileID: 11500000, guid: e169a881d7efe4095947387c926aa0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hook_joint2d: {fileID: 0}
+  playerState: {fileID: 11400000, guid: 07a16a3cbc3ff458da4353ad0d327e1a, type: 2}
 --- !u!50 &2808166352046213518
 Rigidbody2D:
   serializedVersion: 4
@@ -207,6 +207,8 @@ MonoBehaviour:
   fCutJumpHeight: 0.669
   uFrictionMultiply: 0.073
   FlipForce: 10
+  playerAnim: {fileID: 5988643864052680550}
+  hook_joint2d: {fileID: 0}
   isPlayerFlipForce: 1
   castDist: 0.94
   castVecSize: {x: 0, y: 0}
