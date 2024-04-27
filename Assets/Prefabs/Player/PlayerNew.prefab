@@ -200,13 +200,15 @@ MonoBehaviour:
   fJumpVelocity: 20
   fJumpPressedRememberTime: 0.25
   fGroundedRememberTime: 0.25
-  fHorizontalAcceleration: 5.625
-  fHorizontalDampingBasic: 0.65
-  fHorizontalDampingWhenStopping: 0.482
+  fHorizontalAcceleration: 0.5
+  fHorizontalDampingBasic: 0.473
+  fHorizontalDampingWhenStopping: 0.792
   fHorizontalDampingWhenTurning: 0.363
   fCutJumpHeight: 0.669
-  uFrictionMultiply: 0.073
-  FlipForce: 10
+  MaxSpeed: 12.5
+  uFrictionMultiply: 0.35
+  FlipForce: 20
+  GrappleGun: {fileID: 0}
   playerAnim: {fileID: 5988643864052680550}
   hook_joint2d: {fileID: 0}
   isPlayerFlipForce: 1

@@ -594,7 +594,7 @@ GameObject:
   m_Component:
   - component: {fileID: 195767307}
   - component: {fileID: 195767309}
-  m_Layer: 10
+  m_Layer: 6
   m_Name: in_py_sc2_wall
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -695,11 +695,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163.00333
+      value: 164.98975
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.6551998
+      value: 2.2682
       objectReference: {fileID: 0}
     - target: {fileID: 6068590049574547440, guid: 87709ce340c9c9d458dcd5706186ed9b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5895,7 +5895,7 @@ PrefabInstance:
       objectReference: {fileID: 1625482822}
     - target: {fileID: 5364817009462500155, guid: 743337ea8c852e24b99fa6fc66ed273a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 163.00333
+      value: 160.5696
       objectReference: {fileID: 0}
     - target: {fileID: 5364817009462500155, guid: 743337ea8c852e24b99fa6fc66ed273a, type: 3}
       propertyPath: m_LocalPosition.y

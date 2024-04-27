@@ -31,7 +31,7 @@ public class NewPlayerAnim : MonoBehaviour
             default:
             break;
         }
-        Debug.Log(playerState.currentState);
+        //Debug.Log(playerState.currentState);
     }
     public void ChangeAnimeState(PlayerAnimeState state){
         // Prevent Load same Anim

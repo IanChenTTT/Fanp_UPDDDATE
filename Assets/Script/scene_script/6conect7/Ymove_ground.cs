@@ -6,6 +6,7 @@ public class Ymove_ground : MonoBehaviour
 {
     public float high;
     private int colicount;
+    public GameObject trapon;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,8 @@ public class Ymove_ground : MonoBehaviour
         colicount++;
         if(colicount<=1)
         {
-this.gameObject.transform.position += new Vector3(0, high, 0);
+            this.gameObject.transform.position += new Vector3(0, high* Time.deltaTime, 0);
+            trapon.SetActive(true);
         }
         
     }

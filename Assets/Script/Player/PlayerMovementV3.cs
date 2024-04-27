@@ -36,6 +36,7 @@ public class PlayerMovementV3 : MonoBehaviour
     float fCutJumpHeight = 0.5f;
    private float fHorizontalVelocity;
 
+   [SerializeField] private float MaxSpeed;
    // Assumption frition material woudn't larger then 1;
    [SerializeField]
    [Range(0,1)]
@@ -131,22 +132,28 @@ public class PlayerMovementV3 : MonoBehaviour
         }
 
         fHorizontalVelocity = playerRB.velocity.x;
-        fHorizontalVelocity += HorizontalInput;
+        if(fHorizontalVelocity <= MaxSpeed && fHorizontalVelocity >= -MaxSpeed)
+        {
+            fHorizontalVelocity += HorizontalInput * fHorizontalAcceleration ;
 
-        if (Mathf.Abs(HorizontalInput) < 0.01f)
-            fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenStopping, Time.deltaTime * 10f);
-        else if (Mathf.Sign(HorizontalInput) != Mathf.Sign(fHorizontalVelocity))
-            fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenTurning, Time.deltaTime * 10f);
-        else
-            fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingBasic, Time.deltaTime * 10f);
+            if (Mathf.Abs(HorizontalInput) < 0.01f)
+                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenStopping, Time.deltaTime*10);
+            else if (Mathf.Sign(HorizontalInput) != Mathf.Sign(fHorizontalVelocity))
+                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenTurning, Time.deltaTime );
+            else
+                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingBasic, Time.deltaTime );
+        }
+        Debug.Log(fHorizontalVelocity);
 
     }
    void FixedUpdate(){
-      playerRB.velocity = new Vector2(fHorizontalVelocity, playerRB.velocity.y);
+
+      playerRB.velocity = new Vector2(fHorizontalVelocity , playerRB.velocity.y);
+      
 
       //Handle PLayer Flipping
-      if (HorizontalInput < 0 && isFaceRight)Flip();
-      else if (HorizontalInput > 0 && !isFaceRight)Flip();
+      if ( Input.GetAxisRaw("Horizontal") < 0 && isFaceRight)Flip();
+      else if ( Input.GetAxisRaw("Horizontal") > 0 && !isFaceRight)Flip();
 
    }
 // Check Function

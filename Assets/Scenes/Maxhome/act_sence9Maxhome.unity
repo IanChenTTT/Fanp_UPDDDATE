@@ -2143,6 +2143,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4779919971020496011, guid: b03ad259d9305cf42bc0bdfcf0b59093, type: 3}
+      propertyPath: VelocityModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779919971020496011, guid: b03ad259d9305cf42bc0bdfcf0b59093, type: 3}
       propertyPath: CustomDataModule.enabled
       value: 0
       objectReference: {fileID: 0}
@@ -2151,8 +2155,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4779919971020496011, guid: b03ad259d9305cf42bc0bdfcf0b59093, type: 3}
+      propertyPath: VelocityModule.radial.scalar
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779919971020496011, guid: b03ad259d9305cf42bc0bdfcf0b59093, type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.011764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4779919971020496011, guid: b03ad259d9305cf42bc0bdfcf0b59093, type: 3}
+      propertyPath: VelocityModule.speedModifier.scalar
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 4779919971020496011, guid: b03ad259d9305cf42bc0bdfcf0b59093, type: 3}
       propertyPath: EmissionModule.rateOverTime.minMaxState

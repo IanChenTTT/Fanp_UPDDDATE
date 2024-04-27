@@ -27,7 +27,7 @@ public class board_fade : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         tri=true;
-        item.GetComponent<SpriteRenderer>().enabled = false;
+        item.GetComponent<SpriteRenderer>().color = new Color32(255,255,255,255);
     }
     public void fade(){
             alpha=alpha-x*Time.deltaTime;

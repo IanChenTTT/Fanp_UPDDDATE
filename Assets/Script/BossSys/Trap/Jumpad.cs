@@ -7,12 +7,14 @@ public class Jumpad : MonoBehaviour
 {
     public float forceMagnitude; // Adjust this value to control the force strength
     private bool IsTouch = false;
+    private bool IsPress = false;
     Collision2D collidWith;
     private void Update(){
         // Reduce amount of Input event;
+        IsPress = InputManage.Instance.OnPressSpcae();
     }
     private void FixedUpdate(){
-        if(IsTouch )
+        if(IsTouch && IsPress)
         {
             Debug.Log("Suppose to jump");
             GameObject OBJ = collidWith.gameObject;
