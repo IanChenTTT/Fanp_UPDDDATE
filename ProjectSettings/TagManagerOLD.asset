@@ -4,11 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Projecter
-  - FxTemporaire
   - Ground
-  - padAffect
   - Bullet
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -43,24 +41,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background3
-    uniqueID: 937586717
+  - name: BackGrounBack3
+    uniqueID: 2219692705
     locked: 0
-  - name: Background2
-    uniqueID: 3607478647
+  - name: BackGrounBack2
+    uniqueID: 1397092553
     locked: 0
-  - name: Background1
-    uniqueID: 541519713
+  - name: BackGrounBack1
+    uniqueID: 2746900389
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: frontground1
-    uniqueID: 238577571
+  - name: ForeGround1
+    uniqueID: 991699081
     locked: 0
-  - name: frontground2
-    uniqueID: 1365770601
+  - name: ForeGround2
+    uniqueID: 2733218357
     locked: 0
-  - name: frontground3
-    uniqueID: 3423352603
+  - name: ForeGround3
+    uniqueID: 1683474337
     locked: 0
