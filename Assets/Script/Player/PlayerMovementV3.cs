@@ -66,14 +66,23 @@ public class PlayerMovementV3 : MonoBehaviour
 	
 	void Update ()
     {
+
+        //Handle PLayer Flipping
         HorizontalInput = Input.GetAxisRaw("Horizontal");
         VerticalInput = Input.GetAxisRaw("Vertical");
+        if ( HorizontalInput < 0 && isFaceRight)Flip();
+        else if ( HorizontalInput > 0 && !isFaceRight)Flip();
+
         //Hook Animation
         if(hook_joint2d != null)
         {
             if(hook_joint2d.enabled == true)
             {
                 playerAnim.ChangeAnimeState(PlayerAnimeState.SWING);
+            }
+            else{
+                //iF player was hook before
+                if(playerAnim.IsHook()) playerAnim.ChangeAnimeState(PlayerAnimeState.JUMP);
             }
         }
         fGroundedRemember -= Time.deltaTime;
@@ -101,7 +110,7 @@ public class PlayerMovementV3 : MonoBehaviour
             }
         }
         // JUMP ANIMATE DETECT
-        if((VerticalInput != 0 || playerRB.velocity.y > 0 || playerRB.velocity.y < 0) && !IsGround())
+        if((VerticalInput != 0 || playerRB.velocity.y > 0 || playerRB.velocity.y < 0) && !IsGround() && !playerAnim.IsHook())
         {
             playerAnim.ChangeAnimeState(PlayerAnimeState.JUMP);
 
@@ -139,22 +148,14 @@ public class PlayerMovementV3 : MonoBehaviour
             if (Mathf.Abs(HorizontalInput) < 0.01f)
                 fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenStopping, Time.deltaTime*10);
             else if (Mathf.Sign(HorizontalInput) != Mathf.Sign(fHorizontalVelocity))
-                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenTurning, Time.deltaTime );
+                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingWhenTurning, Time.deltaTime*10 );
             else
-                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingBasic, Time.deltaTime );
+                fHorizontalVelocity *= Mathf.Pow(1f - fHorizontalDampingBasic, Time.deltaTime *10 );
         }
-        Debug.Log(fHorizontalVelocity);
-
     }
    void FixedUpdate(){
 
       playerRB.velocity = new Vector2(fHorizontalVelocity , playerRB.velocity.y);
-      
-
-      //Handle PLayer Flipping
-      if ( Input.GetAxisRaw("Horizontal") < 0 && isFaceRight)Flip();
-      else if ( Input.GetAxisRaw("Horizontal") > 0 && !isFaceRight)Flip();
-
    }
 // Check Function
    private void Flip()

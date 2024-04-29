@@ -200,7 +200,7 @@ MonoBehaviour:
   fJumpVelocity: 20
   fJumpPressedRememberTime: 0.25
   fGroundedRememberTime: 0.25
-  fHorizontalAcceleration: 0.5
+  fHorizontalAcceleration: 0.75
   fHorizontalDampingBasic: 0.473
   fHorizontalDampingWhenStopping: 0.5
   fHorizontalDampingWhenTurning: 0.363

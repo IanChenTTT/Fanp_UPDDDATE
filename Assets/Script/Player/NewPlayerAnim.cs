@@ -41,5 +41,9 @@ public class NewPlayerAnim : MonoBehaviour
 
         playerState.currentState = state;
     }
+    public bool IsHook(){
+        if(playerState.currentState == PlayerAnimeState.SWING)return true;
+        return false;
+    }
 
 }

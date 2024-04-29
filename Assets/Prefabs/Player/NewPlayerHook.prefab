@@ -110,7 +110,7 @@ MonoBehaviour:
   rotateOverTime: 1
   rotationSpeed: 30
   hasMaxDistance: 1
-  maxDistnace: 20
+  maxDistnace: 6.5
   launchToPoint: 1
   launchType: 1
   launchSpeed: 2
@@ -272,7 +272,7 @@ FixedJoint2D:
   m_BreakAction: 3
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: -3652, y: -655.0613}
+  m_ConnectedAnchor: {x: -5975.7593, y: -408.68198}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!114 &4365738366556837720
@@ -289,7 +289,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   a: 0.3
-  player_y: 0.84
+  player_y: 0.5
 --- !u!1 &3724602146152316133
 GameObject:
   m_ObjectHideFlags: 0

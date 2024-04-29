@@ -1022,6 +1022,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1043200442281799230, guid: 4b37d267a11e4434e9f9575397332d24, type: 3}
+      propertyPath: hook_joint2d
+      value: 
+      objectReference: {fileID: 1704057092}
     - target: {fileID: 3506382391514649039, guid: 4b37d267a11e4434e9f9575397332d24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 307.42
@@ -4574,8 +4578,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.037250042, y: 0.47739983, z: 0}
-    m_Extent: {x: 10.81135, y: 19.5307, z: 0}
+    m_Center: {x: -0.039000034, y: 0.47574997, z: 0}
+    m_Extent: {x: 10.8043, y: 19.53485, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -6479,7 +6483,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7430725, y: 16.856163}
+  m_Offset: {x: -1.6949921, y: 17.200901}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -6490,7 +6494,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12.16449, y: 0.97946167}
+  m_Size: {x: 12.260651, y: 0.34635162}
   m_EdgeRadius: 0
 --- !u!61 &1457529619
 BoxCollider2D:
@@ -7744,6 +7748,11 @@ Transform:
   - {fileID: 98428158}
   m_Father: {fileID: 352546766}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!231 &1704057092 stripped
+SpringJoint2D:
+  m_CorrespondingSourceObject: {fileID: 1806219882653679420, guid: 0cb00bf142b89f34591531451adcd411, type: 3}
+  m_PrefabInstance: {fileID: 2096509201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1705334466
 GameObject:
   m_ObjectHideFlags: 0
