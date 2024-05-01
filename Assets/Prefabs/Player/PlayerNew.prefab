@@ -207,7 +207,7 @@ MonoBehaviour:
   fHorizontalDampingWhenTurning: 0.363
   fCutJumpHeight: 0.669
   MaxSpeed: 12.5
-  uFrictionMultiply: 0.35
+  uFrictionMultiply: 0.25
   FlipForce: 20
   GrappleGun: {fileID: 0}
   playerAnim: {fileID: 5988643864052680550}
