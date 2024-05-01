@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2808166352046213518}
   - component: {fileID: 4597974650679714665}
   - component: {fileID: 1043200442281799230}
+  - component: {fileID: 3242731119107454870}
   m_Layer: 11
   m_Name: PlayerNew
   m_TagString: Player
@@ -57,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -200,13 +201,13 @@ MonoBehaviour:
   fJumpVelocity: 20
   fJumpPressedRememberTime: 0.25
   fGroundedRememberTime: 0.25
-  fHorizontalAcceleration: 0.75
+  fHorizontalAcceleration: 0.85
   fHorizontalDampingBasic: 0.473
   fHorizontalDampingWhenStopping: 0.5
   fHorizontalDampingWhenTurning: 0.363
   fCutJumpHeight: 0.669
   MaxSpeed: 12.5
-  uFrictionMultiply: 0.25
+  uFrictionMultiply: 0.35
   FlipForce: 20
   GrappleGun: {fileID: 0}
   playerAnim: {fileID: 5988643864052680550}
@@ -218,3 +219,15 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &3242731119107454870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016266055193933991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4454fc570a188db4fa99b3f5d2ec05c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

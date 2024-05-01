@@ -2597,7 +2597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e21252bf68d854985d42e2fa34e2bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: scene6_spikestrap
+  sceneName: act_scene6_ver0_1_a
 --- !u!4 &494045493
 Transform:
   m_ObjectHideFlags: 0
@@ -2606,12 +2606,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494045490}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 334.58, y: 59.12, z: -14.223691}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 222.1186, y: 57.00811, z: -16.762764}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1338432841}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &507352687
 GameObject:
@@ -4578,8 +4578,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -0.039000034, y: 0.47574997, z: 0}
-    m_Extent: {x: 10.8043, y: 19.53485, z: 0}
+    m_Center: {x: -0.04640007, y: 0.47179985, z: 0}
+    m_Extent: {x: 10.8024, y: 19.5297, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5411,6 +5411,7 @@ Transform:
   m_Children:
   - {fileID: 2112619456}
   - {fileID: 102857641}
+  - {fileID: 494045493}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346499481
@@ -10816,7 +10817,6 @@ SceneRoots:
   - {fileID: 1084890807}
   - {fileID: 1743740563}
   - {fileID: 1145953151}
-  - {fileID: 494045493}
   - {fileID: 1041404469}
   - {fileID: 153223717}
   - {fileID: 2096509201}

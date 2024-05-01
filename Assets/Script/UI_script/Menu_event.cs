@@ -53,7 +53,7 @@ public class Menu_event : MonoBehaviour
     public void activateMainMenu(){
         mainMenuCanvas.SetActive(true);
     }
-    public void deactivateMainMenu(){
+public void deactivateMainMenu(){
         mainMenuCanvas.SetActive(false);
     }
     public void activateSaveslotMenu(bool isLoadingGame)
@@ -73,6 +73,7 @@ public class Menu_event : MonoBehaviour
         alphaopen=true;
         CG.SetActive(true);
         // Invoke("startchange",3.5f);
+        Debug.Log(sceneName+"StartScene Before courtine");
         StartCoroutine(FadeAndLoadSceneRoutine(sceneName));
     }
     public void OncontinueClick(){

@@ -6,6 +6,7 @@ public class SaveSlotMenu : MonoBehaviour
 {
      [Header("Menu Navigations")]
     [SerializeField] private Menu_event  menu_Event;
+    [SerializeField] private string StartScene;
 
     private SaveSlot[] saveSlots;
     private bool isLoadingGame = false;
@@ -50,14 +51,20 @@ public class SaveSlotMenu : MonoBehaviour
              // save the game anytime before loading a new scene
             DataPersistenceManager.instance.SaveGame();
             if(DataPersistenceManager.instance.HasSceneName())
+                Debug.Log(DataPersistenceManager.instance.CurrentScene()+"isLoading test");
                 menu_Event.GetComponent<Menu_event>().StartScene(DataPersistenceManager.instance.CurrentScene());
         }
-        else 
+        else //Case new Game
         {
             DataPersistenceManager.instance.ChangeSelectedProfileId(saveSlot.GetProfileId());
             DataPersistenceManager.instance.NewGame();
             DataPersistenceManager.instance.SaveGame();
-            menu_Event.GetComponent<Menu_event>().StartScene("scene_ver1");
+
+            //Start scene load
+            if(StartScene != null)
+                menu_Event.GetComponent<Menu_event>().StartScene(StartScene);
+            else
+                Debug.LogWarning("start scene must initialize at save slot menu");
         }
     }
     public void DeactivateMenu(){

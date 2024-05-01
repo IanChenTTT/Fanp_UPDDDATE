@@ -9,16 +9,19 @@ public class SaveingPole : MonoBehaviour
     private GameObject canvaHint;
     private bool PlayerEnter;
     private int saveCounter; //TODO
+    private Animator saveAnimator;
     private IEnumerator coroutine;
 
     void Awake()
     {
+        this.saveAnimator = this.GetComponent<Animator>();
         this.PlayerEnter = false;
         saveCounter = 0;
     }
     private void Update(){
         if (Input.GetKeyDown(KeyCode.E) && PlayerEnter){
             DataPersistenceManager.instance.SaveGame();    
+            this.saveAnimator.Play("savepoint");
             canvaHint.transform.Find("HintTxt").gameObject.SetActive(false);
             canvaHint.transform.Find("SuccessTxt").gameObject.SetActive(true);
             coroutine = successSave();

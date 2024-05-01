@@ -4,5 +4,50 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SaveSysV2/MainMenu.unity
+    guid: e65b11dc905f1db4a84d264f699c52d9
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene1_ver0_1_a.unity
+    guid: 5069fc824f41c8c43b8f34fbea4195cc
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene2_ver0_1_a.unity
+    guid: 9e823133b80d3d54693c03efc0bf4e09
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene3_ver0_1_a.unity
+    guid: bfeaf8e270da1ac4abf5fa6557ac7901
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene4_ver0_1_a.unity
+    guid: 7c14c0d1e61e64b6f8284658a71eed9e
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene5_ver0_1_a.unity
+    guid: 0d7d2914d74d44d5cbd8e4c5c378ed8b
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene6_ver0_1_a.unity
+    guid: 5060a8b29a47e43169b8bf6971337146
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene7_ver0_1_a.unity
+    guid: b0284685e4ce6164a867550953001383
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene8_ver0_1_a.unity
+    guid: 5860d545195d93443819f04f7fe1dc4d
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene9_ver0_1_a.unity
+    guid: 2a4b1d49ae8a2f24f923d009026580c4
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene10_ver0_1_a.unity
+    guid: b704619f02ca8464084c3061c8f17a15
+  - enabled: 1
+    path: Assets/Scenes/FinalScene/act_scene11_ver0_1_a.unity
+    guid: ca432b2007934e647b7390ab2f725b40
+  - enabled: 1
+    path: Assets/Scenes/SaveSysV2/player_dead.unity
+    guid: 48236d86744dac64f901483853293c3f
+  - enabled: 1
+    path: Assets/Scenes/SaveSys/take_off_ani.unity
+    guid: 64b5934a61e0c234b9ed49911ab52a2e
+  - enabled: 1
+    path: Assets/Scenes/SaveSys/smallgame_2.unity
+    guid: fbfcc48473ef992469a482c139038045
   m_configObjects: {}

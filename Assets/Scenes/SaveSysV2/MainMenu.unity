@@ -2244,6 +2244,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 652d6f8f0f0d3e046a080b7c30206e2e, type: 3}
     - target: {fileID: 2971980144093359323, guid: 7c99391d5eba07344897bfa0224d23b3, type: 3}
+      propertyPath: StartScene
+      value: act_scene1_ver0_1_a
+      objectReference: {fileID: 0}
+    - target: {fileID: 2971980144093359323, guid: 7c99391d5eba07344897bfa0224d23b3, type: 3}
       propertyPath: menu_Event
       value: 
       objectReference: {fileID: 1633290422}
